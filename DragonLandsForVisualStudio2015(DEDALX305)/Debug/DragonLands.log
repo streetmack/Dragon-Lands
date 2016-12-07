@@ -1,0 +1,14 @@
+﻿  utils.cpp
+src\utils.cpp(54): warning C4838: преобразование из "int" в "SHORT" требует сужающего преобразования
+src\utils.cpp(68): warning C4838: преобразование из "int" в "SHORT" требует сужающего преобразования
+  maps.cpp
+  main.cpp
+src\main.cpp(45): warning C4060: оператор switch не содержит метку "case" или "default"
+src\main.cpp(78): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\conio.h(452): note:  см. объявление "getch"
+  dialogs.cpp
+  Actor.cpp
+  Создание кода...
+  LINK : не найден или не выполнена сборка D:\Институт, work и др\Google Диск\Институт\7 Основы разработки компьютерных игр\dragon lands посл\Debug\DragonLands.exe при последней инкрементной компоновке; выполняется полная компоновка
+  DragonLands.vcxproj -> D:\Институт, work и др\Google Диск\Институт\7 Основы разработки компьютерных игр\dragon lands посл\Debug\DragonLands.exe
+  DragonLands.vcxproj -> D:\Институт, work и др\Google Диск\Институт\7 Основы разработки компьютерных игр\dragon lands посл\Debug\DragonLands.pdb (Full PDB)
