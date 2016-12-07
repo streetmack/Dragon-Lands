@@ -128,7 +128,7 @@ Player::Player()
 	type=L'И';
 	x=5;
 	y=5;
-	MaxHP=20;
+	MaxHP= 1000;
 	HP=MaxHP;
 	WeaponDmg=1;
 	WeaponType=1;
@@ -138,7 +138,7 @@ Player::Player()
 	exp=0;
 	Strength=1;
 	Potion=3;
-	Gold=10;
+	Gold=1000;
 	count_trolls=0;
 	count_rats=0;
 	NPC_color=blacksmith_color;

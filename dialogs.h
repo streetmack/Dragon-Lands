@@ -15,13 +15,13 @@ public:
 };
 
 void Init_Dialog(Player *player);
-//void Blacksmith_Dialog();
+void Blacksmith_Dialog();
 void Healer_Dialog();
-//void Merchant_Dialog();
-//void Merchant2_Dialog();
-//void Mayor_Dialog();
-//void OldMan_Dialog();
-//void Guard_Dialog();
+void Merchant_Dialog();
+void Merchant2_Dialog();
+void Mayor_Dialog();
+void OldMan_Dialog();
+void Guard_Dialog();
 
-//void Lose_Dialog();
-//void Win_Dialog();
+void Lose_Dialog();
+void Win_Dialog();

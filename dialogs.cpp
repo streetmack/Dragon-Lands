@@ -2,6 +2,7 @@
 
 Player *g_player=0;
 
+// Включение и отключение квестов у персонажей 
 bool blacksmith_q=true;
 bool merchant_q=true;
 bool mayor_q=true;
@@ -16,7 +17,7 @@ void Init_Dialog(Player *player)
 	g_player=player;
 }
 
-bool Pay(int cost)
+bool Pay(int cost) // Сообщения при покупке золота
 {
 	if(g_player->Gold<cost)
 	{
@@ -27,15 +28,16 @@ bool Pay(int cost)
 	PrintLog(L"Вы заплатили %d золотых!",FG_WHITE,cost);
 	return true;
 }
-
-void Blacksmith_Dialog()
+// ---------------------------------------------------------------------------------------------------------------------
+// Персонажи и диалоги
+void Blacksmith_Dialog() // Кузнец
 {
 	system("cls");
-	PrintBorder();
-	g_player->RenderStat();
+	PrintBorder(); // Вызывается в utils.cpp (отрисовывание рамки)
+	g_player->RenderStat(); // Вызов метода отрисовки информации об ГГ чтобы при диалоге не было пустного экрана информации об текущем статусе персонажа
 
 	int k=L'A';
-	while(k!=L'0')
+	while(k!=L'0') // Пока игрок не нажмет 0 будет отображаться следующий диалог
 	{
 		int WeaponCost=g_player->WeaponDmg*(6*g_player->WeaponDmg);
 		int ArmorCost=g_player->Armor*(8*g_player->Armor);
@@ -45,8 +47,8 @@ void Blacksmith_Dialog()
 		Print(L"-----------------",FG_GREEN,1,str++);
 		Print(L"1: Улучшить оружие - %d золотых",FG_GREEN,1,str++,WeaponCost);
 		Print(L"2: Улучшить доспехи - %d золотых",FG_GREEN,1,str++,ArmorCost);
-		Print(L"3: Поговорить",FG_GREEN,1,str++);
-		if(blacksmith_q)Print(L"4: Квест",FG_GREEN,1,str++);
+		Print(L"3: Поговорить",FG_GREEN,1,str++); 
+		if(blacksmith_q)Print(L"4: Квест",FG_GREEN,1,str++); // Пока нету
 		else Print(L"         ",FG_GREEN,1,str++);
 		Print(L"-----------------",FG_GREEN,1,str++);
 		Print(L"0: Выход",FG_GREEN,1,str++);
@@ -67,7 +69,7 @@ void Blacksmith_Dialog()
 				}else PrintLog(L"Ни одного тролля рядом... Лепота!",FG_WHITE);
 				break;
 			}
-			case L'4':
+			case L'4': // Квест
 			{
 				if(!blacksmith_q)break;
 				if(g_player->count_trolls<10)
@@ -91,11 +93,11 @@ void Blacksmith_Dialog()
 	}
 }
 
-void Healer_Dialog()
+void Healer_Dialog() // Лекарь
 {
 	system("cls");
-	PrintBorder();
-	g_player->RenderStat();
+	PrintBorder(); // Вызывается в utils.cpp (отрисовывание рамки)
+	g_player->RenderStat(); // Вызов метода отрисовки информации об ГГ чтобы не было пустного экрана информации об текущем статусе персонажа
 
 	int k=L'A';
 	while(k!=L'0')
@@ -116,7 +118,7 @@ void Healer_Dialog()
 
 		k=_getch();
 		ClearLog();
-		switch(k)
+		switch(k) // Варианты диалога
 		{
 			case L'1':if(Pay(PotionCost))g_player->Potion++;break;
 			case L'2':
@@ -131,7 +133,7 @@ void Healer_Dialog()
 				PrintLog(L"На всякий случай, вдруг попадется особо опасный монстр...",FG_WHITE);
 				break;
 			}
-			case L'4':
+			case L'4': // Квест
 			{
 				PrintLog(L"Вы взяли лекарство для старика.",FG_YELLOW|FG_INT);
 				drugs=2;
@@ -143,11 +145,11 @@ void Healer_Dialog()
 	}
 }
 
-void Merchant_Dialog()
+void Merchant_Dialog() // Торговец
 {
 	system("cls");
-	PrintBorder();
-	g_player->RenderStat();
+	PrintBorder(); // Вызывается в utils.cpp (отрисовывание рамки)
+	g_player->RenderStat(); // Вызов метода отрисовки информации об ГГ чтобы не было пустного экрана информации об текущем статусе персонажа
 
 	int k=L'A';
 	while(k!=L'0')
@@ -222,11 +224,11 @@ void Merchant_Dialog()
 	}
 }
 
-void Merchant2_Dialog()
+void Merchant2_Dialog() // Торговец2
 {
 	system("cls");
-	PrintBorder();
-	g_player->RenderStat();
+	PrintBorder(); // Вызывается в utils.cpp (отрисовывание рамки)
+	g_player->RenderStat(); // Вызов метода отрисовки информации об ГГ чтобы не было пустного экрана информации об текущем статусе персонажа
 
 	int k=L'A';
 	while(k!=L'0')
@@ -262,11 +264,11 @@ void Merchant2_Dialog()
 	}
 }
 
-void Mayor_Dialog()
+void Mayor_Dialog() // Мэр города
 {
 	system("cls");
-	PrintBorder();
-	g_player->RenderStat();
+	PrintBorder(); // Вызывается в utils.cpp (отрисовывание рамки)
+	g_player->RenderStat(); // Вызов метода отрисовки информации об ГГ чтобы не было пустного экрана информации об текущем статусе персонажа
 
 	int k=L'A';
 	while(k!=L'0')
@@ -349,11 +351,11 @@ void Mayor_Dialog()
 	}
 }
 
-void OldMan_Dialog()
+void OldMan_Dialog() // Старик
 {
 	system("cls");
-	PrintBorder();
-	g_player->RenderStat();
+	PrintBorder(); // Вызывается в utils.cpp (отрисовывание рамки)
+	g_player->RenderStat(); // Вызов метода отрисовки информации об ГГ чтобы не было пустного экрана информации об текущем статусе персонажа
 
 	int k=L'A';
 	while(k!=L'0')
@@ -411,11 +413,11 @@ void OldMan_Dialog()
 	}
 }
 
-void Guard_Dialog()
+void Guard_Dialog() // Привратник (сторож)
 {
 	system("cls");
-	PrintBorder();
-	g_player->RenderStat();
+	PrintBorder(); // Вызывается в utils.cpp (отрисовывание рамки)
+	g_player->RenderStat(); // Вызов метода отрисовки информации об ГГ чтобы не было пустного экрана информации об текущем статусе персонажа
 
 	int k=L'A';
 	while(k!=L'0')
@@ -478,22 +480,22 @@ void Guard_Dialog()
 		g_player->RenderStat();
 	}
 }
-
-void Lose_Dialog()
+// ---------------------------------------------------------------------------------------------------------------------
+void Lose_Dialog() // Сообщение о конце из-за смерти
 {
 	system("cls");
-	PrintBorder();
-	g_player->RenderStat();
+	PrintBorder(); // Вызывается в utils.cpp (отрисовывание рамки)
+	//g_player->RenderStat(); // Вызов метода отрисовки информации об ГГ чтобы не было пустного экрана информации об текущем статусе персонажа
 
 	int str=1;
 	Print(L"GAME OVER",FG_RED|FG_INT,1,str++);
 }
 
-void Win_Dialog()
+void Win_Dialog() // Сообщение о конце из-за победы
 {
 	system("cls");
-	PrintBorder();
-	g_player->RenderStat();
+	PrintBorder(); // Вызывается в utils.cpp (отрисовывание рамки)
+	//g_player->RenderStat(); // Вызов метода отрисовки информации об ГГ чтобы не было пустного экрана информации об текущем статусе персонажа
 
 	int str=1;
 	Print(L"Победа!",FG_GREEN|FG_INT,1,str++);

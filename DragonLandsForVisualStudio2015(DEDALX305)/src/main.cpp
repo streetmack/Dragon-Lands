@@ -23,25 +23,25 @@ int wmain()
 	{
 		if(map->player.dead)
 		{
-			//Lose_Dialog(); // Вечная память герою
+			Lose_Dialog(); // Вечная память герою
 			break; 
 		}
 		if(map->player.bVictory)
 		{
-			//Win_Dialog(); // Показываем диалог о победе над драконом
+			Win_Dialog(); // Показываем диалог о победе над драконом
 			break;
 		}
 		if(map->player.bDialogMode)
 		{
 			switch(map->player.NPC_color)
 			{
-				//case blacksmith_color:Blacksmith_Dialog();break; // Кузнец
-				//case healer_color:Healer_Dialog();break; // Лекарь
-				//case merchant_color:Merchant_Dialog();break; //
-				//case merchant2_color:Merchant2_Dialog();break; // 
-				//case mayor_color:Mayor_Dialog();break; // Мэр
-				//case oldman_color:OldMan_Dialog();break; // Старик
-				//case guard_color:Guard_Dialog();break; // Привратник
+				case blacksmith_color:Blacksmith_Dialog();break; // Кузнец
+				case healer_color:Healer_Dialog();break; // Лекарь
+				case merchant_color:Merchant_Dialog();break; //
+				case merchant2_color:Merchant2_Dialog();break; // 
+				case mayor_color:Mayor_Dialog();break; // Мэр
+				case oldman_color:OldMan_Dialog();break; // Старик
+				case guard_color:Guard_Dialog();break; // Привратник
 			}
 			map->player.bDialogMode=false;
 			map->Loc().RepaintMap(); // Перерисовываем карту
