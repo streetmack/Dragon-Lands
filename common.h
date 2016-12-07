@@ -1,0 +1,30 @@
+#pragma once
+
+// Цвета текста (foreground colors)
+#define FG_INT FOREGROUND_INTENSITY
+#define FG_RED FOREGROUND_RED
+#define FG_GREEN FOREGROUND_GREEN
+#define FG_BLUE FOREGROUND_BLUE
+#define FG_WHITE FOREGROUND_RED|FOREGROUND_GREEN|FOREGROUND_BLUE
+#define FG_YELLOW FOREGROUND_RED|FOREGROUND_GREEN
+#define FG_PURPLE FOREGROUND_RED|FOREGROUND_BLUE
+#define FG_CYAN FOREGROUND_GREEN|FOREGROUND_BLUE
+
+// Цвета фона (background colors)
+#define BG_INT BACKGROUND_INTENSITY
+#define BG_RED BACKGROUND_RED
+#define BG_GREEN BACKGROUND_GREEN
+#define BG_BLUE BACKGROUND_BLUE
+#define BG_WHITE BACKGROUND_RED|BACKGROUND_GREEN|BACKGROUND_BLUE
+#define BG_YELLOW BACKGROUND_RED|BACKGROUND_GREEN
+#define BG_PURPLE BACKGROUND_RED|BACKGROUND_BLUE
+#define BG_CYAN BACKGROUND_GREEN|BACKGROUND_BLUE
+
+// Константы (const)
+const int map_count_x=3;
+const int map_count_y=3;
+const int map_width=55;
+const int map_height=16;
+
+const int max_str=255;
+const int max_monsters=20;
