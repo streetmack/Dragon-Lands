@@ -14,8 +14,6 @@ Actor::Actor()
 	dead=true; // если false то рушится вся логика игры !!! убрать нужно 
 	HP=1; // Здоровье
 	MaxHP=1; // Максимальное здоровье
-
-	
 }
 
 bool Actor::TestCollision(int _x,int _y)
