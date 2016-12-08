@@ -11,9 +11,11 @@ Actor::Actor()
 	exp=0; // Опыт
 	WeaponDmg=10; // 10 по умолчанию
 	Gold=0; // Золото
-	dead=true; // если false то рушится вся логика игры
+	dead=true; // если false то рушится вся логика игры !!! убрать нужно 
 	HP=1; // Здоровье
 	MaxHP=1; // Максимальное здоровье
+
+	
 }
 
 bool Actor::TestCollision(int _x,int _y)

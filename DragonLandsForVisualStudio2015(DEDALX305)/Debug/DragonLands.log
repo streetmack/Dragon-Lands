@@ -8,5 +8,5 @@ src\main.cpp(78): warning C4996: 'getch': The POSIX name for this item is deprec
   dialogs.cpp
   Actor.cpp
   Создание кода...
-  DragonLands.vcxproj -> C:\Users\DEDAL\Desktop\Dragon-Lands\DragonLandsForVisualStudio2015(DEDALX305)\Debug\DragonLands.exe
-  DragonLands.vcxproj -> C:\Users\DEDAL\Desktop\Dragon-Lands\DragonLandsForVisualStudio2015(DEDALX305)\Debug\DragonLands.pdb (Full PDB)
+  DragonLands.vcxproj -> C:\Users\Apollo\Desktop\Dragon-Lands\DragonLandsForVisualStudio2015(DEDALX305)\Debug\DragonLands.exe
+  DragonLands.vcxproj -> C:\Users\Apollo\Desktop\Dragon-Lands\DragonLandsForVisualStudio2015(DEDALX305)\Debug\DragonLands.pdb (Full PDB)

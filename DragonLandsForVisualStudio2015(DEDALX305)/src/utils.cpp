@@ -267,7 +267,7 @@ void PrintMonsterDealDamage(wchar_t MonsterType,int damage)
 
 	switch(MonsterType)
 	{
-		case L'п': // Паук
+		case L'П': // Паук
 		{
 			switch(rnd)
 			{

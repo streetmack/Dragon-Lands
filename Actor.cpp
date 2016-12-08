@@ -11,9 +11,11 @@ Actor::Actor()
 	exp=0; // Опыт
 	WeaponDmg=10; // 10 по умолчанию
 	Gold=0; // Золото
-	dead=true; // если false то рушится вся логика игры
+	dead=true; // если false то рушится вся логика игры !!! убрать нужно 
 	HP=1; // Здоровье
 	MaxHP=1; // Максимальное здоровье
+
+	
 }
 
 bool Actor::TestCollision(int _x,int _y)
@@ -128,7 +130,7 @@ Player::Player()
 	type=L'И';
 	x=5;
 	y=5;
-	MaxHP=20;
+	MaxHP= 1000;
 	HP=MaxHP;
 	WeaponDmg=1;
 	WeaponType=1;
@@ -138,7 +140,7 @@ Player::Player()
 	exp=0;
 	Strength=1;
 	Potion=3;
-	Gold=10;
+	Gold=1000;
 	count_trolls=0;
 	count_rats=0;
 	NPC_color=blacksmith_color;
