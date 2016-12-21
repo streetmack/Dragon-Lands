@@ -149,7 +149,7 @@ void Map::LoadMap()
 			for(int y=0;y<map_height;y++)
 				for(int x=0;x<map_width;x++)
 				{
-					Loc().SetChar(x,y,maps[j][i][y][x],false); //особая индексация массива
+					Loc().SetChar(x,y,maps[j][i][y][x],false); // индексация массива
 					Loc().SetColor(x,y,FG_WHITE|FG_INT,false);
 					wchar_t chr=Loc().GetChar(x,y);
 					switch(chr)

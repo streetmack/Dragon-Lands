@@ -106,13 +106,13 @@ void Monster::Spawn(wchar_t _type, int _x, int _y)
 
 	switch (_type)
 	{
-	case L'П':Gold = Rand(0, 0);	MaxHP = Rand(1, 2);	level = 2;	exp = 1;	WeaponDmg = 1;	break; // Паук
-	case L'К':Gold = Rand(2, 5);	MaxHP = Rand(4, 8);	level = 3;	exp = 2;	WeaponDmg = 2;	break; // Крыса	 
-	case L'Г':Gold = Rand(1, 4);	MaxHP = Rand(6, 12);	level = 4;	exp = 3;	WeaponDmg = 3;	break; // Гоблин
-	case L'Т':Gold = Rand(5, 10);	MaxHP = Rand(10, 15);	level = 5;	exp = 5;	WeaponDmg = 5;	break; // Тролль
-	case L'Н':Gold = Rand(25, 40);	MaxHP = Rand(20, 25);	level = 7;	exp = 8;	WeaponDmg = 7;	break; // Наемник
-	case L'З':Gold = Rand(5, 15);	MaxHP = Rand(5, 12);	level = 5;	exp = 4;	WeaponDmg = 4;	break; // Зомби
-	case L'Д':Gold = 1000;		MaxHP = 300;			level = 10;	exp = 10;	WeaponDmg = 8;	break; // Дракон 	 
+	case L'П':Gold = Rand(0, 0);	MaxHP = Rand(1, 2);	  level = 2;	exp = 1;	WeaponDmg = 1;	break; // Паук
+	case L'К':Gold = Rand(2, 5);	MaxHP = Rand(4, 8);	  level = 3;	exp = 2;	WeaponDmg = 2;	break; // Крыса	 
+	case L'Г':Gold = Rand(1, 4);	MaxHP = Rand(6, 12);  level = 4;	exp = 3;	WeaponDmg = 3;	break; // Гоблин
+	case L'Т':Gold = Rand(5, 10);   MaxHP = Rand(10, 15); level = 5;	exp = 5;	WeaponDmg = 5;	break; // Тролль
+	case L'Н':Gold = Rand(25, 40);  MaxHP = Rand(20, 25); level = 7;	exp = 8;	WeaponDmg = 7;	break; // Наемник
+	case L'З':Gold = Rand(5, 15);   MaxHP = Rand(5, 12);  level = 5;	exp = 4;	WeaponDmg = 4;	break; // Зомби
+	case L'Д':Gold = 1000;          MaxHP = 300;          level = 10;	exp = 10;	WeaponDmg = 8;	break; // Дракон 	 
 	}
 	if (Random())Gold = 0;
 
